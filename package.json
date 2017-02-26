@@ -1,20 +1,31 @@
 {
   "name": "gif-search",
-  "version": "0.1.0",
-  "private": true,
-  "main": "src/index.js",
-  "devDependencies": {
-    "react-scripts": "0.9.0"
-  },
-  "dependencies": {
-    "axios": "^0.15.3",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+  "version": "1.0.0",
+  "description": "Treehouse.com data fetching with React",
+  "engines": {
+    "node": "6.9.x"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "start": "node server",
+    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsur/gif-search.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {}
 }
